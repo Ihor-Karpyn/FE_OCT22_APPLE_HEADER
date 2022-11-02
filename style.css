@@ -14,6 +14,10 @@ body {
   padding: 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -25,9 +29,18 @@ body {
 }
 
 .header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: saturate(180%) blur(20px);
   font-size: 0;
+}
+
+.nav_list {
+  text-align: center;
 }
 
 .nav_item {
@@ -49,6 +62,36 @@ body {
   color: silver;
 }
 
+.main {
+  padding: 40px;
+  border: 2px solid red;
+  background-color: white;
+}
+
+.mainText {
+  margin-bottom: 10px;
+}
+
+.footer {
+  position: sticky;
+  bottom: 0;
+  z-index: -1;
+
+  height: 500px;
+
+  line-height: 500px;
+  text-align: center;
+
+  background-image: linear-gradient(to bottom right, red, yellow);
+}
+
+.promo {
+  height: 300px;
+  background-image: url("https://mate-academy.github.io/fe-program/assets/MA_top.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
 
 
 

@@ -1,0 +1,34 @@
+.red {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+
+.yellow {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+
+  position: sticky;
+  top: 10px;
+}
+
+section {
+  border: 1px solid black;
+}
+
+.green {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+
+p {
+  text-align: end;
+}
+
+.rule {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
