@@ -1,6 +1,7 @@
 html {
   font-family: Arial, sans-serif;
   font-size: 16px;
+  color: white;
 }
 
 p,
@@ -22,10 +23,12 @@ ul {
   box-sizing: border-box;
 }
 
-.test {
-  width: 100px;
-  padding: 20px;
-  border: 10px solid black;
+.promo {
+  height: 300px;
+  background-image: url("https://mate-academy.github.io/fe-program/assets/MA_top.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 .header {
@@ -36,15 +39,47 @@ ul {
 
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: saturate(180%) blur(20px);
-  font-size: 0;
 }
 
 .nav_list {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-height: 0;
+
+  overflow: hidden;
+
+  transition: max-height 0.3s;
 }
 
-.nav_item {
-  display: inline-block;
+.nav--opened .nav_list {
+  max-height: 152px;
+}
+
+.label {
+  display: block;
+  padding: 10px;
+}
+
+.button::before {
+  content: "=";
+}
+
+.nav--opened .button::before {
+  content: "X";
+}
+
+.checkbox {
+  display: none;
+}
+
+
+
+
+@media (min-width: 500px) {
+  .nav_list {
+    justify-content: space-around;
+    flex-direction: row;
+  }
 }
 
 .nav_link {
@@ -70,6 +105,7 @@ ul {
 
 .mainText {
   margin-bottom: 10px;
+  color: green;
 }
 
 .footer {
@@ -77,21 +113,16 @@ ul {
   bottom: 0;
   z-index: -1;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 500px;
 
-  line-height: 500px;
   text-align: center;
 
   background-image: linear-gradient(to bottom right, red, yellow);
 }
 
-.promo {
-  height: 300px;
-  background-image: url("https://mate-academy.github.io/fe-program/assets/MA_top.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-}
 
 
 

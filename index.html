@@ -13,7 +13,8 @@
     <section class="promo"></section>
 
     <header class="header">
-      <nav class="nav">
+      <nav id="mobileNav" class="nav nav--opened">
+        <button id="openMenuBtn" class="button"></button>
         <ul class="nav_list">
           <li class="nav_item">
             <a class="nav_link" href="#">Mac</a>
@@ -63,7 +64,15 @@
 
     <footer class="footer">
       Some text form footer
+      <br>
+      dfgm
     </footer>
+
+    <script>
+      document.querySelector('#openMenuBtn').addEventListener('click', function () {
+        document.querySelector('#mobileNav').classList.toggle('nav--opened')
+      })
+    </script>
   </body>
 </html>
 
